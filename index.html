@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess a Number</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #4facfe, #00f2fe);
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .form label {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 1rem;
+            border: none;
+            outline: none;
+        }
+
+        .form input[type="number"] {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .form input[type="submit"] {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .form input[type="submit"]:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(to right, #ff4b2b, #ff416c);
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .result p {
+            font-size: 1rem;
+        }
+
+        .guesses {
+            font-weight: bold;
+            color: #00f2fe;
+        }
+
+        .lowOrHi {
+            color: #ffd700;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 600px;
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            .form label {
+                font-size: 1.3rem;
+            }
+
+            .form input {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Guess the Number!</h1>
+        <p>Can you guess the secret number between 1 and 100? You have 10 tries to get it right!</p>
+        <form class="form">
+            <label for="guessfield" id="guess">Enter your guess:</label>
+            <input type="number" id="guessfieldinput" class="guessfield" placeholder="Your guess here" required>
+            <input type="submit" id="subBtn" class="btn" value="Submit">
+        </form>
+        <div class="result">
+            <p>Previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="last-result">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+    <script src="fourth.js"></script>
+</body>
+
+</html>
