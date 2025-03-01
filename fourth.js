@@ -40,7 +40,7 @@ function validateGuess(guess) {
         numGuess++;
 
         if (numGuess === 11) {
-            displayMessage(`Beta tu nikal tera ho gya. The correct number was ${randomNumber}.`);
+            displayMessage(`Game over your attempt is over The correct number was ${randomNumber}.`);
             endGame();
         } else {
             displayGuess(guess);
@@ -51,14 +51,14 @@ function validateGuess(guess) {
 
 function checkGuess(guess) {
     if (guess === randomNumber) {
-        displayMessage(`Sabaash Beta..! tune sahi guess kiya! Papa ka naam roshan karega. The number is ${randomNumber}.`);
+        displayMessage(`7-crore Congratulation you guess the right number.`);
         endGame();
     }
     else if (guess < randomNumber) {
-        displayMessage(`Beta, number bohot chhota hai thoda bada guess kar.`);
+        displayMessage(`Your number is too small.`);
     }
     else if (guess > randomNumber) {
-        displayMessage(`Beta, number bohot bada hai thoda apni aukaat ke hisab se guess kar.`);
+        displayMessage(`Your number is too large.`);
     }
 }
 
